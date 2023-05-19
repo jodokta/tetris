@@ -1,0 +1,83 @@
+.wrapper{
+    display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 10 30%;
+   background-color: black;
+   width:100vw;
+   height:100vh;
+   line-height: 64px;
+ }
+ h1{
+   color: white;
+   position: relative;
+   font-size: 5em;
+   margin-bottom: 1%;
+   top: -10%;
+   cursor: default;
+ }
+ 
+ a{
+   color: white;
+   font-size: 1.5em;
+   cursor: pointer;
+   text-decoration: none;
+ }
+ 
+ .question-mark{
+   border: 1px solid white;
+   border-radius: 50%;
+   width: 16px;
+   height: 16px;
+   color: white;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+   right: 5%;
+   bottom: 5%;
+   opacity: 60%;
+   transition: 0.3s;
+}
+ 
+ .question-mark:hover{
+   transition:0.3s;
+   opacity: 0%;
+}
+ .guide{
+   width: 30%;
+   height: 30%;
+   font-size: 10pt;
+     border: none;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     color: white;
+     position: fixed;
+     right: 5%;
+     bottom: 30%;
+     transition: 0.3s;
+ }
+ 
+ .guide.hidden{
+   opacity: 0%;
+   font-size: 0px;
+   transition: 0.3s;
+ }
+
+ .icon-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 14pt;
+    border: 2px solid;
+    box-shadow: 1px 1px 4px 2px #555555;
+    text-align: center;
+    padding: 4px 4px;
+    padding-bottom: 5px;
+    margin-right: 10px;
+ }
