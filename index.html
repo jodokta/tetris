@@ -14,43 +14,53 @@
     <a>싱글플레이</a>
     <a>멀티플레이</a>
     <a>설정</a>
-    <div class="question-mark">
-      <span>  
-      ?
-      </span> 
+    <div class="area-for-hover">
+      <div class="question-mark">
+        <span>  
+        ?
+        </span> 
+      </div>
     </div>
     <div class="guide hidden">
-        <div class="icon-box">
-            <p>
-                ↓ 
-            </p> 
+        <div class="key-container">
+          <div class="icon-box">
+            ↓ 
+          </div>
+          <span>
+            Soft Down
+          </span>
         </div>
-        <span>
-          Soft Down
-        </span>
-        <div class="icon-box">  
-                ←  
-        </div>
-        <span>
+        <div class="key-container">
+          <div class="icon-box">  
+            ←  
+          </div>
+          <div class="icon-box">  
+            →  
+          </div>
+          <span>
             Move to Left, Right
-        </span>
-        <div class="icon-box">
-            <p>
-                ↑ 
-            </p>
+          </span>
         </div>
-        <span>
+        <div class="key-container">
+          <div class="icon-box">
+            ↑ 
+          </div>
+          <span>
             Rotating a tetrimino
-        </span>
-        <div class="icon-box">
-            <p>
-                Spacebar 
-            </p>
+          </span>
         </div>
-        <span>
+
+        <div class="key-container">
+          <div class="icon-box">
+            Spacebar 
+          </div>
+          <span>
             Hard Down
-        </span>
-      </div>
+          </span>
+        </div>
+    </div>
+   <canvas id="tetris-rain"></canvas>
+        
     <script type = "module" src="/js/index.js"></script>
   </div>
 </body>
