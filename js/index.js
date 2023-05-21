@@ -27,8 +27,7 @@ class Tetrimino {
     this.y = -20;
     this.speed = Math.random() * 2 + 2;
     this.color = this.randomColor();
-    this.blocks = [];
-    this.createTetrimino();
+    this.blocks = this.createTetrimino();
     this.rotateAngle = 0;
     this.rotateSpeed = Math.random() * 0.02; 
     this.rotateDirection = Math.round(Math.random()) * 2 - 1;
@@ -64,7 +63,7 @@ class Tetrimino {
       [1, 1, 1]]
     ];
 
-    this.blocks = shapes[Math.floor(Math.random() * shapes.length)];
+    return shapes[Math.floor(Math.random() * shapes.length)];
   }
 
   draw() {
@@ -78,7 +77,6 @@ class Tetrimino {
     ctx.translate(this.x + blockSize * 1.5, this.y + blockSize * 1.5); // 회전 중심점을 블록의 중앙으로 이동
     ctx.rotate(this.rotateAngle); // 블록 회전시키기
     ctx.translate(-this.x - blockSize * 1.5, -this.y - blockSize * 1.5); // 회전 중심점을 원래 상태로 되돌리기
-
     for (let i = 0; i < this.blocks.length; i++) {
       for (let j = 0; j < this.blocks[i].length; j++) {
         if (this.blocks[i][j]) {
@@ -90,13 +88,13 @@ class Tetrimino {
       }
     }
     ctx.restore(); // 이전 캔버스 상태를 복원
+    
     this.rotateAngle +=  this.rotateSpeed * this.rotateDirection; // 회전 각도를 천천히 증가시키기
 
     if (this.y > canvas.height) { //한 번 만들어진 오브젝트가 화면 아래로 내려가면 위치 변수를 조정하고 새로 만듦
       this.y = -10;
       this.x = Math.random() * canvas.width;
-      this.blocks = [];
-      this.createTetrimino();
+      this.blocks = this.createTetrimino();
     }
   }
 
@@ -115,8 +113,6 @@ function animate() {
 
   for (const tetrimino of tetriminos) {
     tetrimino.draw();
-    if (Math.random() < 0.005) {
-    }
   }
   
   
